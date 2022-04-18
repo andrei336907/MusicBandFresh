@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MusicBandRepo>
+    <musicBands>
+        <id>1</id>
+        <name>fds</name>
+        <coordinates>
+            <x>2131.0</x>
+            <y>213</y>
+        </coordinates>
+        <creationDate>2022-04-18T14:57:36.637621200</creationDate>
+        <numberOfParticipants>213</numberOfParticipants>
+        <genre>SOUL</genre>
+        <bestAlbum>
+            <name>da</name>
+            <sales>312</sales>
+        </bestAlbum>
+    </musicBands>
+</MusicBandRepo>
