@@ -27,7 +27,7 @@ public class MySpotify {
 
 	public void Start() throws FileNotFoundException {
 		userInterface.writeMessage("Hello");
-		userInterface.writeMessage("Enter ? for command list");
+		userInterface.writeMessage("Enter '?' or 'help' for command list");
 		boolean shouldContinue = true;
 		while (shouldContinue) {
 			String input = userInterface.readStringValue("command");

@@ -21,17 +21,27 @@ class TestModel {
                 coordinates(new Coordinates(10., 10)).
                 genre(MusicGenre.BLUES).
                 numberOfParticipants(7).
-//                bestAlbum("zapoy", )
+                bestAlbum(new Album("zapoy", 599999)).
                 build();
         musicBandRepo.add(mb);
         MusicBand returned = musicBandRepo.getAll().stream().findFirst().orElse(null);
-        Assertions.assertEquals(returned, mb, "not equal");
+        Assertions.assertEquals(returned, mb);
 
         MusicBand newM = mb.toBuilder().name("blues").build();
         musicBandRepo.update(newM);
-        MusicBand returned1 = musicBandRepo.getAll().stream().findFirst().orElse(null);
+        MusicBand returnedUpd = musicBandRepo.getAll().stream().findFirst().orElse(null);
         Assertions.assertNotEquals(mb, newM);
-        Assertions.assertEquals(returned1, newM,"not equal");
+        Assertions.assertEquals(returnedUpd, newM);
 
+        Assertions.assertEquals(1, musicBandRepo.getAll().size());
+        musicBandRepo.sumParticipants();
+        Assertions.assertEquals(7,musicBandRepo.sumParticipants());
+
+
+        musicBandRepo.findByNamePattern("Beer");
+//        Assertions.assertEquals([],musicBandRepo.findByNamePattern("Beer"));
+
+        musicBandRepo.clear();
+        Assertions.assertEquals(0, musicBandRepo.getAll().size());
     }
 }

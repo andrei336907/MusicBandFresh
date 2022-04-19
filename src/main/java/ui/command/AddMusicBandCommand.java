@@ -7,8 +7,6 @@ import model.entity.MusicGenre;
 import model.repository.MusicBandRepo;
 import ui.UserInterface;
 
-import java.io.FileNotFoundException;
-
 public class AddMusicBandCommand extends NonTerminatingCommand {
 	private final MusicBandRepo musicBandRepo;
 
@@ -18,7 +16,7 @@ public class AddMusicBandCommand extends NonTerminatingCommand {
 	}
 
 	@Override
-	public void run() throws FileNotFoundException {
+	public void run() {
 		String name = getUserInterface().readStringValue("music band name");
 		double coordinateX = getUserInterface().readDoubleValue("coordinate x");
 		Integer coordinateY = getUserInterface().readIntegerValue("coordinate y");

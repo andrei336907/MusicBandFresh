@@ -54,7 +54,6 @@ public class MusicBand implements Comparable<MusicBand> {
 
     @Override
     public int compareTo(MusicBand o) {
-        /// sort criteria ------------------
-        return 1;
+        return numberOfParticipants.compareTo(o.numberOfParticipants);
     }
 }

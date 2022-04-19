@@ -3,20 +3,16 @@ package ui.command;
 import model.repository.MusicBandRepo;
 import ui.UserInterface;
 
-public class RemoveCommand extends NonTerminatingCommand {
+public class SumPart extends NonTerminatingCommand {
     private final MusicBandRepo musicBandRepo;
 
-    public RemoveCommand(UserInterface userInterface, MusicBandRepo musicBandRepo) {
+    public SumPart(UserInterface userInterface, MusicBandRepo musicBandRepo) {
         super(userInterface);
         this.musicBandRepo = musicBandRepo;
     }
 
     @Override
     public void run() {
-        Integer id = getUserInterface().readIntegerValue("music band id");
-        musicBandRepo.remove(id);
-
+        getUserInterface().writeReturnedValue(musicBandRepo.sumParticipants().toString(), "sum of parts");
     }
-
-
 }

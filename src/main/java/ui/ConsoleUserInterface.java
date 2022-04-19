@@ -3,15 +3,22 @@ package ui;
 import java.util.Scanner;
 
 public class ConsoleUserInterface<T> implements UserInterface {
-	private final Scanner in = new Scanner(System.in);
+	private Scanner in = new Scanner(System.in);
 
 	@Override
 	public String readStringValue(String message) {
 		System.out.println((char) 27 + "[35mEnter " + message + " >" + (char) 27 + "[0m");
-		while (!in.hasNext()) {
+		while (!in.hasNext() ) {
 			System.out.println((char) 27 + "[35mEnter " + message + " >" + (char) 27 + "[0m");
-			in.next();
+			try {
+				in.next();
+			}
+			catch (Exception ignored) {
+				System.out.println("wtf are you doing?");
+				return "q";
+			}
 		}
+
 		return in.next();
 	}
 
