@@ -37,11 +37,47 @@ class TestModel {
         musicBandRepo.sumParticipants();
         Assertions.assertEquals(7,musicBandRepo.sumParticipants());
 
+        musicBandRepo.findByNamePattern("blues");
+        MusicBand musicBand2 = musicBandRepo.getAll().stream().findFirst().orElse(null);
+        Assertions.assertEquals(musicBand2, newM);
 
-        musicBandRepo.findByNamePattern("Beer");
-//        Assertions.assertEquals([],musicBandRepo.findByNamePattern("Beer"));
+        musicBandRepo.filterByParts(7);
+        MusicBand musicBand1 = musicBandRepo.getAll().stream().findFirst().orElse(null);
+        Assertions.assertEquals(musicBand1, newM);
 
         musicBandRepo.clear();
         Assertions.assertEquals(0, musicBandRepo.getAll().size());
+
+
+        musicBandRepo.add(mb);
+        musicBandRepo.remove(1);
+        Assertions.assertEquals(0, musicBandRepo.getAll().size());
+
+        musicBandRepo.add(mb);
+        MusicBand mb1 = MusicBand.builder().
+                name("BeerHunters2").
+                coordinates(new Coordinates(10., 10)).
+                genre(MusicGenre.BLUES).
+                numberOfParticipants(9).
+                bestAlbum(new Album("zapoyscshiki", 999999)).
+                build();
+        musicBandRepo.add(mb1);
+        musicBandRepo.removeGreater(mb1);
+        Assertions.assertEquals(2,musicBandRepo.getAll().size());
+        musicBandRepo.removeGreater(mb);
+        Assertions.assertEquals(1, musicBandRepo.getAll().size());
+
+        MusicBand mb3 = MusicBand.builder().
+                name("BeerHunters3").
+                coordinates(new Coordinates(10., 10)).
+                genre(MusicGenre.BLUES).
+                numberOfParticipants(3).
+                bestAlbum(new Album("pivasik", 9999)).
+                build();
+        musicBandRepo.addIfMax(mb3);
+
+        Assertions.assertEquals(1,musicBandRepo.getAll().size());
+
+
     }
 }
