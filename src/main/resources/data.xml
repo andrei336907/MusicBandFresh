@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MusicBandRepo>
     <musicBands>
-        <id>5</id>
-        <name>goof</name>
-        <coordinates>
-            <x>1.0</x>
-            <y>1</y>
-        </coordinates>
-        <creationDate>2022-04-19T00:08:15.444120800</creationDate>
-        <numberOfParticipants>1</numberOfParticipants>
-        <genre>BLUES</genre>
-        <bestAlbum>
-            <name>ak</name>
-            <sales>765432</sales>
-        </bestAlbum>
-    </musicBands>
-    <musicBands>
         <id>3</id>
-        <name>cars</name>
+        <name>Faster</name>
         <coordinates>
             <x>4.0</x>
             <y>4</y>
         </coordinates>
-        <creationDate>2022-04-19T00:04:48.557251100</creationDate>
-        <numberOfParticipants>3</numberOfParticipants>
-        <genre>BLUES</genre>
-        <bestAlbum>
-            <name>wheel</name>
-            <sales>765432</sales>
-        </bestAlbum>
-    </musicBands>
-    <musicBands>
-        <id>6</id>
-        <name>filer</name>
-        <coordinates>
-            <x>444.0</x>
-            <y>5</y>
-        </coordinates>
-        <creationDate>2022-04-19T00:58:41.847806800</creationDate>
+        <creationDate>2022-04-22T23:30:20.193229300</creationDate>
         <numberOfParticipants>2</numberOfParticipants>
         <genre>SOUL</genre>
         <bestAlbum>
-            <name>gerych</name>
-            <sales>3123123213</sales>
+            <name>Race</name>
+            <sales>2132532</sales>
+        </bestAlbum>
+    </musicBands>
+    <musicBands>
+        <id>5</id>
+        <name>ris</name>
+        <coordinates>
+            <x>1.0</x>
+            <y>1</y>
+        </coordinates>
+        <creationDate>2022-04-22T23:32:51.874407700</creationDate>
+        <numberOfParticipants>2</numberOfParticipants>
+        <genre>JAZZ</genre>
+        <bestAlbum>
+            <name>red</name>
+            <sales>75757647476</sales>
+        </bestAlbum>
+    </musicBands>
+    <musicBands>
+        <id>4</id>
+        <name>BeerLover</name>
+        <coordinates>
+            <x>5.0</x>
+            <y>5</y>
+        </coordinates>
+        <creationDate>2022-04-22T23:31:00.744290800</creationDate>
+        <numberOfParticipants>3</numberOfParticipants>
+        <genre>BLUES</genre>
+        <bestAlbum>
+            <name>PIvarik</name>
+            <sales>387387387</sales>
+        </bestAlbum>
+    </musicBands>
+    <musicBands>
+        <id>2</id>
+        <name>HotWheels</name>
+        <coordinates>
+            <x>1.0</x>
+            <y>2</y>
+        </coordinates>
+        <creationDate>2022-04-22T23:29:45.398283700</creationDate>
+        <numberOfParticipants>4</numberOfParticipants>
+        <genre>JAZZ</genre>
+        <bestAlbum>
+            <name>NFS</name>
+            <sales>13213213532</sales>
         </bestAlbum>
     </musicBands>
 </MusicBandRepo>
