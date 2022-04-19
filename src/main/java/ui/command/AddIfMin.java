@@ -17,14 +17,14 @@ public class AddIfMin extends NonTerminatingCommand {
 
     @Override
     public void run() {
-        String name = getUserInterface().readStringValue("music band name");
-        double coordinateX = getUserInterface().readDoubleValue("coordinate x");
-        Integer coordinateY = getUserInterface().readIntegerValue("coordinate y");
+        String name = getUserInterface("eve").readStringValue("music band name");
+        double coordinateX = getUserInterface("eve").readDoubleValue("coordinate x");
+        Integer coordinateY = getUserInterface("eve").readIntegerValue("coordinate y");
         Coordinates coordinates = new Coordinates(coordinateX, coordinateY);
-        Integer participantsNumber = getUserInterface().readIntegerValue("participants number");
-        MusicGenre musicGenre = MusicGenre.valueOf(getUserInterface().readStringValue("music genge (jazz, soul, blues)").toUpperCase());
-        String albumName = getUserInterface().readStringValue("best album name");
-        Long albumSales = getUserInterface().readLongValue("best album sales");
+        Integer participantsNumber = getUserInterface("eve").readIntegerValue("participants number");
+        MusicGenre musicGenre = MusicGenre.valueOf(getUserInterface("eve").readStringValue("music genge (jazz, soul, blues)").toUpperCase());
+        String albumName = getUserInterface("eve").readStringValue("best album name");
+        Long albumSales = getUserInterface("eve").readLongValue("best album sales");
         Album album = new Album(albumName, albumSales);
         MusicBand musicBand = MusicBand.builder()
                 .name(name)

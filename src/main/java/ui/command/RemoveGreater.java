@@ -17,7 +17,7 @@ public class RemoveGreater extends NonTerminatingCommand{
     @Override
     public void run() throws FileNotFoundException {
 
-        Integer id = getUserInterface().readIntegerValue("id");
+        Integer id = getUserInterface("eve").readIntegerValue("id");
         MusicBand musicBand = musicBandRepo.getById(id);
         musicBandRepo.removeGreater(musicBand);
     }

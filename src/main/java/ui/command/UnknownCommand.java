@@ -10,6 +10,6 @@ public class UnknownCommand extends NonTerminatingCommand {
 
 	@Override
 	public void run() {
-		getUserInterface().writeWarning("Command not found, try again");
+		getUserInterface("eve").writeWarning("Command not found, try again");
 	}
 }

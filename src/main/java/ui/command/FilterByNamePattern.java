@@ -16,10 +16,10 @@ public class FilterByNamePattern extends NonTerminatingCommand {
 
     @Override
     public void run() {
-        String pattern = getUserInterface().readStringValue("pattern");
+        String pattern = getUserInterface("eve").readStringValue("pattern");
         Collection<MusicBand> musicBands = musicBandRepo.findByNamePattern(pattern);
         for (MusicBand musicBand : musicBands) {
-            getUserInterface().writeMessage(musicBand.toString());
+            getUserInterface("eve").writeMessage(musicBand.toString());
         }
     }
 }

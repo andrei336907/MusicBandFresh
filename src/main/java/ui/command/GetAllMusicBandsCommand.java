@@ -15,11 +15,11 @@ public class GetAllMusicBandsCommand extends NonTerminatingCommand {
     @Override
     public void run() {
         if (musicBandRepo.getAll().isEmpty()) {
-            getUserInterface().writeMessage("Your collection doesn't exist");
+            getUserInterface("eve").writeMessage("Your collection doesn't exist");
         }
         else {
         for (MusicBand musicBand : musicBandRepo.getAll()) {
-            getUserInterface().writeMessage(musicBand.toString());
+            getUserInterface("eve").writeMessage(musicBand.toString());
         }
         }
     }

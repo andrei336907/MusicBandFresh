@@ -59,6 +59,6 @@ public class ReadFromFile extends NonTerminatingCommand {
     public void run() throws FileNotFoundException {
 
         musicBandRepo.readFromFile();
-        getUserInterface().writeMessage("Collection uploaded");
+        getUserInterface("eve").writeMessage("Collection uploaded");
     }
 }

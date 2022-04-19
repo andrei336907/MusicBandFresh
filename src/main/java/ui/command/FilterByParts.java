@@ -16,10 +16,10 @@ public class FilterByParts extends NonTerminatingCommand {
 
     @Override
     public void run() {
-        Integer i = getUserInterface().readIntegerValue("parts sum");
+        Integer i = getUserInterface("eve").readIntegerValue("parts sum");
         Collection<MusicBand> musicBands = musicBandRepo.filterByParts(i);
         for (MusicBand musicBand : musicBands) {
-            getUserInterface().writeMessage(musicBand.toString());
+            getUserInterface("eve").writeMessage(musicBand.toString());
         }
     }
 }

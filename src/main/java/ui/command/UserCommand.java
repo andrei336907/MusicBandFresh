@@ -22,7 +22,7 @@ public abstract class UserCommand {
 		return shouldContinue;
 	}
 
-	public UserInterface getUserInterface() {
+	public UserInterface getUserInterface(String eve) {
 		return userInterface;
 	}
 }

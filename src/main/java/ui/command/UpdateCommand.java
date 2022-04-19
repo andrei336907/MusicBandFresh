@@ -19,16 +19,16 @@ public class UpdateCommand extends NonTerminatingCommand{
 
     @Override
     public void run() throws FileNotFoundException {
-        Integer id = getUserInterface().readIntegerValue("music band id");
+        Integer id = getUserInterface("eve").readIntegerValue("music band id");
         System.out.println("enter new parameters");
-        String name = getUserInterface().readStringValue("music band name");
-        double coordinateX = getUserInterface().readDoubleValue("coordinate x");
-        Integer coordinateY = getUserInterface().readIntegerValue("coordinate y");
+        String name = getUserInterface("eve").readStringValue("music band name");
+        double coordinateX = getUserInterface("eve").readDoubleValue("coordinate x");
+        Integer coordinateY = getUserInterface("eve").readIntegerValue("coordinate y");
         Coordinates coordinates = new Coordinates(coordinateX, coordinateY);
-        Integer participantsNumber = getUserInterface().readIntegerValue("participants number");
-        MusicGenre musicGenre = MusicGenre.valueOf(getUserInterface().readStringValue("music genge (jazz, soul, blues)").toUpperCase());
-        String albumName = getUserInterface().readStringValue("best album name");
-        Long albumSales = getUserInterface().readLongValue("best album sales");
+        Integer participantsNumber = getUserInterface("eve").readIntegerValue("participants number");
+        MusicGenre musicGenre = MusicGenre.valueOf(getUserInterface("eve").readStringValue("music genge (jazz, soul, blues)").toUpperCase());
+        String albumName = getUserInterface("eve").readStringValue("best album name");
+        Long albumSales = getUserInterface("eve").readLongValue("best album sales");
         Album album = new Album(albumName, albumSales);
         MusicBand musicBand = MusicBand.builder()
                 .id(id)
@@ -39,6 +39,6 @@ public class UpdateCommand extends NonTerminatingCommand{
                 .bestAlbum(album)
                 .build();
         musicBandRepo.update(musicBand);
-        getUserInterface().writeReturnedValue("updated music band", musicBand.getName());
+        getUserInterface("eve").writeReturnedValue("updated music band", musicBand.getName());
     }
 }

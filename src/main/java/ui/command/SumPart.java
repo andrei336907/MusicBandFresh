@@ -13,6 +13,6 @@ public class SumPart extends NonTerminatingCommand {
 
     @Override
     public void run() {
-        getUserInterface().writeReturnedValue(musicBandRepo.sumParticipants().toString(), "sum of parts");
+        getUserInterface("eve").writeReturnedValue(musicBandRepo.sumParticipants().toString(), "sum of parts");
     }
 }

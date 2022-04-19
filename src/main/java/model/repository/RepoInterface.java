@@ -19,4 +19,6 @@ public interface RepoInterface<T> {
 	Collection<T> filterByParts(Integer partsNum);
 	Collection<T> findByNamePattern(String pattern);
 	void clear();
+
+
 }
