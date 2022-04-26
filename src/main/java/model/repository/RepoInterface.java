@@ -20,5 +20,4 @@ public interface RepoInterface<T> {
 	Collection<T> findByNamePattern(String pattern);
 	void clear();
 
-
 }
