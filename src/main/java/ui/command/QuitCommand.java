@@ -9,7 +9,7 @@ public class QuitCommand extends TerminatingCommand {
 
 	@Override
 	public void run() {
-		getUserInterface().writeMessage("Thanks for using, bye");
+		getUserInterface("eve").writeMessage("Thanks for using, bye");
 	}
 
 }

@@ -13,7 +13,7 @@ public class RemoveCommand extends NonTerminatingCommand {
 
     @Override
     public void run() {
-        Integer id = getUserInterface().readIntegerValue("music band id");
+        Integer id = getUserInterface("eve").readIntegerValue("music band id");
         musicBandRepo.remove(id);
 
     }

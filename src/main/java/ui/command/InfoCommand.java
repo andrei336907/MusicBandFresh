@@ -15,13 +15,13 @@ public class InfoCommand extends NonTerminatingCommand {
     public void run() {
 
         if (musicBandRepo.getAll().isEmpty()) {
-            getUserInterface().writeMessage("Your collection doesn't exist");
+            getUserInterface("eve").writeMessage("Your collection doesn't exist");
         }
         else {
-            getUserInterface().writeMessage("Collection type - PriorityQueue");
+            getUserInterface("eve").writeMessage("Collection type - PriorityQueue");
             Integer size = musicBandRepo.getAll().size();
-            getUserInterface().writeMessage("Collection size - " + size.toString());
-            getUserInterface().writeMessage("Collection creation date - " + musicBandRepo.getAll().stream().findFirst().get().getCreationDate());}
+            getUserInterface("eve").writeMessage("Collection size - " + size.toString());
+            getUserInterface("eve").writeMessage("Collection creation date - " + musicBandRepo.getAll().stream().findFirst().get().getCreationDate());}
     }
 }
 
