@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 
 public abstract class UserCommand {
 	private final boolean shouldContinue;
-	private UserInterface userInterface;
+	protected UserInterface userInterface;
 
 	public UserCommand(
 			boolean shouldContinue,

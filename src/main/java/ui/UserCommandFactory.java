@@ -29,6 +29,7 @@ public class UserCommandFactory {
 			case "fp", "filter parts" -> new FilterByParts(userInterface, musicBandRepo);
 			case "fn", "filter name" -> new FilterByNamePattern(userInterface, musicBandRepo);
 			case "rf", "read file" -> new ReadFromFile(userInterface, musicBandRepo);
+			case "ec", "ex com" -> new ExecuteScriptCommand(userInterface, musicBandRepo);
 
 			default -> new UnknownCommand(userInterface);
 		};

@@ -20,6 +20,13 @@ public class MySpotify {
 		MusicBandRepo mbp = new MusicBandRepo();
 		userCommandFactory = new UserCommandFactory(userInterface, mbp);
 	}
+
+	public MySpotify(UserInterface userInterface) {
+		this.userInterface = userInterface;
+		MusicBandRepo mbp = new MusicBandRepo();
+		userCommandFactory = new UserCommandFactory(userInterface, mbp);
+	}
+
 	public MySpotify(@NonNull UserInterface ui, @NonNull MusicBandRepo mbp){
 		userInterface = ui;
 		userCommandFactory = new UserCommandFactory(userInterface, mbp);
