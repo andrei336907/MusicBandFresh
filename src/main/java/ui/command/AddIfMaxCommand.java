@@ -18,7 +18,7 @@ public class AddIfMaxCommand extends NonTerminatingCommand{
     @Override
     public void run() {
         String name = getUserInterface("eve").readStringValue("music band name");
-        double coordinateX = getUserInterface("eve").readDoubleValue("coordinate x");
+        double coordinateX = userInterface.readDoubleValue("coordinate x");
         Integer coordinateY = getUserInterface("eve").readIntegerValue("coordinate y");
         Coordinates coordinates = new Coordinates(coordinateX, coordinateY);
         Integer participantsNumber = getUserInterface("eve").readIntegerValue("participants number");
